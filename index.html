@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="/_CSS/stylesindex.css">
+    <title>Mi Primer Formulario HTML</title>
+  </head>
+  <body>
+    <main>
+    <div class="container">
+      <header><h1>📝 Formulario actualización datos sanitas</h1></header>
+
+
+      <!-- FORMULARIO HTML -->
+      <form id="miFormulario">
+        <!-- Campo de texto simple -->
+        <div class="form-group">
+          <label for="name">Nombre completo:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Escribe tu nombre completo"
+            autofocus
+            pattern="[A-za-z ]{3,40}" />
+        </div>
+
+
+        <!-- date -->
+        <div class="form-group">
+          <label for="nacimiento">Fecha de nacimiento:</label>
+            <input 
+            type="date" 
+            name="nacimiento" 
+            id="nacimiento"
+            required>
+            <!-- hidden -->
+            <input 
+            type="hidden" 
+            name="userID" 
+            value="12345">
+        </div>
+
+
+        <!-- File -->
+        <div class="form-group">
+        <label for="doc">Suba su documento de identidad:</label>
+        <input 
+        type="file" 
+        id="doc" 
+        name="doc"
+        placeholder="Suba su doc"
+        required>
+        </div>
+
+
+        <!--Campos de radio-->
+
+        <div class="form-group">
+            <label>Estado Civil</label>
+            <input
+            type="radio"
+            id="soltera"
+            name="estado"
+            value="soltera"
+            required
+            >
+            <label for="soltera" style="display: inline; margin-left: 5px">Soltera</label><br>
+
+            <input
+            type="radio"
+            id="casada"
+            name="estado"
+            value="casada"
+            >
+            <label for="casada" style="display: inline; margin-left: 5px">Casada</label><br>
+
+            <input
+            type="radio"
+            id="Viuda"
+            name="estado"
+            value="Viuda"
+            >
+            <label for="Viuda" style="display: inline; margin-left: 5px">Viuda</label>
+        </div>
+
+        <!-- Campo de número -->
+        <div class="form-group">
+          <label for="peso">Peso kg:</label>
+          <input
+            type="number"
+            id="peso"
+            name="peso"
+            min="40"
+            max="200"
+            required
+            placeholder="Tu peso en kg" />
+        </div>
+
+        <!-- Campo de email -->
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="ejemplo@correo.com"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"/>
+        </div>
+
+        <!-- tel -->
+        <div class="form-group">
+            <label for="phone">Ingrese  su numero de telefono:</label>
+            <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+            required>
+        </div>
+
+        <!-- Campo de selección -->
+        <div class="form-group">
+          <label for="ciudad">Ciudad:</label>
+          <select
+            id="ciudad"
+            name="ciudad"
+            required>
+            <option value="">Selecciona tu ciudad</option>
+            <option value="bogota">Bogotá</option>
+            <option value="medellin">Medellín</option>
+            <option value="cali">Cali</option>
+            <option value="barranquilla">Barranquilla</option>
+            <option value="otra">Otra</option>
+          </select>
+        </div>
+
+        <!-- Time -->
+        <div class="form-group">
+            <label for="H-ingreso">Hora de ingreso a las instalaciones:</label>
+                <input 
+                type="time" 
+                id="H-ingreso" 
+                name="H-ingreso"
+                required>
+        </div>
+
+        <!-- datetime-->
+        <div class="form-group">
+            <label for="cita">Fecha y hora de la cita</label>
+                <input 
+                type="datetime-local" 
+                name="cita" 
+                id="cita"
+                required>
+        </div>
+
+        <!--search-->
+        <div class="form-group">
+            <label for="sisben">Busca en google tu sisben:</label>
+                <input 
+                type="search" 
+                id="sisben" 
+                name="sisben"
+                placeholder="Buscar tu sisben"
+                pattern="^[A-Za-z\s]+$">
+        </div>
+
+        <!-- url-->
+        <div class="form-group">
+            <label for="redsocial">Ingresa un link de tu sisben</label>
+                <input 
+                type="url" 
+                id="redsocial" 
+                name="redsocial"
+                placeholder="https://www.sisben.gov.co/consulta"
+                pattern="https?://.*"
+                required>
+        </div>
+
+
+        <!--password-->
+        <div class="form-group">
+          <label for="password">Contraseña:</label>
+                <input 
+                type="password" 
+                id="password" 
+                name="password"
+                placeholder="Mínimo 8 caracteres, letras y números y simbolo"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                required>
+        </div>
+
+         <!--color-->
+        <div class="form-group">
+             <label for="favcolor">Seleccione su color favorito:</label>
+                <input 
+                type="color" 
+                id="favcolor" 
+                name="favcolor">
+        </div>
+
+        <!-- month -->
+        <div class="form-group">
+            <label for="favmonth">Mes favorito:</label>
+                <input type="month" 
+                id="favmonth" 
+                name="favmonth">
+        </div>
+        
+        
+        <!--range-->
+        <div class="form-group">
+            <label for="ran">Rango de satisfacción:</label>
+                <input 
+                type="range" 
+                id="ran" 
+                name="ran" 
+                min="0" 
+                max="10">
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-group">
+          <input
+            type="checkbox"
+            id="acepto"
+            name="acepto"
+            required />
+          <label
+            for="acepto"
+            style="display: inline; margin-left: 140px">
+            Acepto los términos y condiciones
+          </label>
+        </div>
+
+        <!-- Área de texto -->
+        <div class="form-group">
+          <label for="comentarios">Comentarios adicionales:</label>
+          <textarea
+            id="comentarios"
+            name="comentarios"
+            rows="4"
+            placeholder="Cuéntanos algo más sobre ti (opcional)"></textarea>
+        </div>
+        
+        <!-- Botón de envío -->
+        <button type="submit">🚀 Enviar Formulario</button>
+        <input type="reset" value="Borrar todo">
+        <input type="button" onclick="alert('Cominicate con nosotros a 3114510923')" value="PQRS">
+
+        <!-- Botón de envío -->
+        <input type="image" src="/_img/eps.jpg" width="40" height="200">
+      </form>
+
+      
+      <!-- ÁREA DONDE SE MOSTRARÁN LOS RESULTADOS -->
+      <div
+        id="resultado"
+        class="resultado">
+        <h3>✅ ¡Formulario enviado exitosamente!</h3>
+        <p>Estos son los datos que enviaste:</p>
+        <div id="datosEnviados"></div>
+      </div>
+    </div>
+
+    <script>
+      // 🎯 SIMULACIÓN DEL ENVÍO DEL FORMULARIO
+
+      // Esperar a que el formulario sea enviado
+      document
+        .getElementById('miFormulario')
+        .addEventListener('submit', function (evento) {
+          // 1. Prevenir que la página se recargue (comportamiento por defecto)
+          evento.preventDefault();
+
+          // 2. Capturar todos los datos del formulario
+          const formulario = evento.target;
+          const datosFormulario = new FormData(formulario);
+
+          // 3. Mostrar los datos en la consola (para estudiantes avanzados)
+          console.log('📊 Datos del formulario:');
+          for (let [campo, valor] of datosFormulario.entries()) {
+            console.log(`${campo}: ${valor}`);
+          }
+
+          // 4. Convertir los datos a un formato legible
+          let datosHTML = '';
+
+          // Recorrer cada campo y crear HTML para mostrar
+          for (let [campo, valor] of datosFormulario.entries()) {
+            // Hacer más legibles los nombres de los campos
+            let nombreCampo = campo;
+            switch (campo) {
+              case 'nombre':
+                nombreCampo = 'Nombre completo';
+                break;
+              case 'email':
+                nombreCampo = 'Correo electrónico';
+                break;
+              case 'edad':
+                nombreCampo = 'Edad';
+                break;
+              case 'ciudad':
+                nombreCampo = 'Ciudad';
+                break;
+              case 'experiencia':
+                nombreCampo = 'Experiencia en programación';
+                break;
+              case 'acepto':
+                nombreCampo = 'Términos aceptados';
+                break;
+              case 'comentarios':
+                nombreCampo = 'Comentarios';
+                break;
+            }
+
+            // Si el campo tiene valor, mostrarlo
+            if (valor && valor.trim() !== '') {
+              datosHTML += `
+                        <div class="dato">
+                            <span class="etiqueta">${nombreCampo}:</span> ${valor}
+                        </div>
+                    `;
+            }
+          }
+
+          // 5. Mostrar los resultados en la página
+          document.getElementById('datosEnviados').innerHTML = datosHTML;
+          document.getElementById('resultado').style.display = 'block';
+
+          // 6. Scroll suave hacia los resultados
+          document.getElementById('resultado').scrollIntoView({
+            behavior: 'smooth',
+          });
+
+          // 7. Mensaje de confirmación adicional
+          alert(
+            '¡Formulario enviado correctamente! 🎉\nRevisa los datos más abajo.'
+          );
+        });
+
+    
+    </script>
+    </main>
+  </body>
+</html>
